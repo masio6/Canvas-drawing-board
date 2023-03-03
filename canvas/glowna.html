@@ -1,0 +1,38 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylegl.css">
+    <title>Baza obrazów</title>
+</head>
+<body>
+    <section class="container">
+       <h1>PO PROSTU RYSUJ!<h1>
+  <label>podaj nazwe obrazu</label><br>
+  <input type="text" id="lname" name="lname"><button type="button">Stwórz nowy obraz</button>
+  <table>
+
+  </table>
+        <table>
+		<?php  
+		echo "tujestem";
+		$json_data=file_get_contents("listarys.json");
+		
+	$json=json_decode($json_data,true);
+		var_dump($json);
+		if(count($json)!=0)
+		{
+		
+		foreach($json as $rys){
+		?>
+		<tr>
+		<td><?php echo $rys['nazwa'] ?></td>
+		</tr>
+		<?php } }?>
+		</table>
+	
+    </section>
+    <script src="./index.js"></script>
+</body>
+</html>

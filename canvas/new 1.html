@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Drawing app</title>
+</head>
+<body>
+    <section class="container">
+       
+
+	   <div id="toolbar">
+            <h1><span id="tytul">Rysuj!</span></h1>
+        
+            <input id="stroke" name='stroke' type="color">
+       
+            <select style="font-size:15px;" id="thickness">
+<option value="2">bardzo cieńka</option>
+<option value="3"> cieńka</option>
+<option value="4.5">normalna</option>
+<option value="6.5">pół gruba</option>
+<option value="8">gruba</option>
+<option value="12">bardzo gruba</option>
+</select>
+
+            <select style="font-size:15px;" id="kind">
+<option value="1">zwykła</option>
+<option value="2">prosta</option>
+<option value="3">elipsa</option>
+
+</select>
+  
+            <button id="clear">Clear</button>
+		
+			
+        </div>
+		
+        <div class="drawing-board" id="board1">
+            <canvas id="canvas" ></canvas>
+        </div>
+    </section>
+	  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script type="module" src="./index11.js"></script>
+</body>
+</html>
